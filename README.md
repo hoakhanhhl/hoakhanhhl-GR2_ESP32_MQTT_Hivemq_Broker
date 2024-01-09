@@ -1,4 +1,14 @@
-<strong>Lập trình ESP32 MQTT bật tắt đèn với Hivemq Broker</strong>
+<strong>Dùng MQTT online:Lập trình ESP32 MQTT bật tắt đèn với Hivemq Broker</strong><br>
+**- Khái niệm:**
+Hivemq Broker chia thành 2 loại:<br>
+Public broker: Sử dụng cổng 1883, không có bảo mật, thường dùng để test ứng dụng hoặc các sản phẩm đơn giản<br>
+Private broker: Sử dụng cổng 8883 và bảo mật SSL/TLS. Bạn có thể sử dụng nó trong các sản phẩm thương mại, nhưng tất nhiên nên để ý các điều khoản khi sử dụng nhé
+- Cách sử dụng Public broker<br>
+Link ứng dụng: https://www.hivemq.com/
+
+Link ảnh: https://drive.google.com/drive/folders/14kIu2sUUVLoCfeHMQGtzChkAY9ea1KHR
+- Lập trình ESP32 MQTT
++ Cài đặt thư viện pubsubclient
 **1, Khái niệm PubSub**
 PubSub là một mô hình giao tiếp trong lập trình phần mềm, nơi các thành phần gửi và nhận thông điệp thông qua việc xuất bản và đăng ký các thông điệp trên các chủ đề (topics) chung. Người xuất bản tạo và gửi thông điệp vào chủ đề, trong khi người đăng ký quan tâm đến các thông điệp trong chủ đề đó và nhận thông điệp khi chúng được gửi đi. Mô hình này được sử dụng trong các hệ thống phân tán và cung cấp tính linh hoạt và khả năng mở rộng. Một ví dụ thực tế của PubSub là hệ thống gửi thông báo trong ứng dụng di động.
 
@@ -63,17 +73,3 @@ Trong hộp tìm kiếm, nhập "PubSubClient" và nhấp Enter.
 Tìm thư viện "PubSubClient" trong kết quả tìm kiếm và nhấp vào nút "Install" để cài đặt thư viện.
 Chờ đợi quá trình cài đặt hoàn thành.
 Sau khi thư viện PubSubClient đã được cài đặt thành công, bạn có thể sử dụng nó để phát triển ứng dụng MQTT client trên ESP32. Bạn có thể tham khảo các ví dụ và tài liệu hướng dẫn trên trang web chính thức của thư viện PubSubClient để biết cách sử dụng thư viện này trong việc kết nối và giao tiếp với MQTT broker.
-
-Dùng MQTT online:Lập trình ESP32 MQTT bật tắt đèn với Hivemq Broker
-- Khái niệm:
-Hivemq Broker chia thành 2 loại:
-Public broker: Sử dụng cổng 1883, không có bảo mật, thường dùng để test ứng dụng hoặc các sản phẩm đơn giản
-Private broker: Sử dụng cổng 8883 và bảo mật SSL/TLS. Bạn có thể sử dụng nó trong các sản phẩm thương mại, nhưng tất nhiên nên để ý các điều khoản khi sử dụng nhé
-- Cách sử dụng Public broker
-Link ứng dụng: https://www.hivemq.com/
-Link ảnh: https://drive.google.com/drive/folders/14kIu2sUUVLoCfeHMQGtzChkAY9ea1KHR
-- Lập trình ESP32 MQTT
-+ Cài đặt thư viện pubsubclient
-
-
-
