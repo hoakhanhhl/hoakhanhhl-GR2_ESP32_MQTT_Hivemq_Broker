@@ -4,14 +4,14 @@ Hivemq Broker chia thành 2 loại:<br>
 Public broker: Sử dụng cổng 1883, không có bảo mật, thường dùng để test ứng dụng hoặc các sản phẩm đơn giản<br>
 Private broker: Sử dụng cổng 8883 và bảo mật SSL/TLS. Bạn có thể sử dụng nó trong các sản phẩm thương mại, nhưng tất nhiên nên để ý các điều khoản khi sử dụng nhé
 - Cách sử dụng Public broker<br>
-Link ứng dụng: https://www.hivemq.com/
+Link ứng dụng: https://www.hivemq.com/<br>
 Link ảnh: https://drive.google.com/drive/folders/14kIu2sUUVLoCfeHMQGtzChkAY9ea1KHR
 - Lập trình ESP32 MQTT
 + Cài đặt thư viện pubsubclient<br>
 **1, Khái niệm PubSub**<br>
 PubSub là một mô hình giao tiếp trong lập trình phần mềm, nơi các thành phần gửi và nhận thông điệp thông qua việc xuất bản và đăng ký các thông điệp trên các chủ đề (topics) chung. Người xuất bản tạo và gửi thông điệp vào chủ đề, trong khi người đăng ký quan tâm đến các thông điệp trong chủ đề đó và nhận thông điệp khi chúng được gửi đi. Mô hình này được sử dụng trong các hệ thống phân tán và cung cấp tính linh hoạt và khả năng mở rộng. Một ví dụ thực tế của PubSub là hệ thống gửi thông báo trong ứng dụng di động.
 
-**2, Mô hình client/server**
+**2, Mô hình client/server**<br>
 Mô hình Server/Client là một kiến trúc phần mềm phổ biến trong lập trình mạng, trong đó có sự tương tác giữa các máy chủ (server) và các máy khách (client).
 
 Trong mô hình này, máy chủ là một hệ thống hoặc dịch vụ cung cấp các tài nguyên và dịch vụ. Nó lắng nghe và đáp ứng yêu cầu từ các máy khách. Máy khách là các thiết bị hoặc ứng dụng yêu cầu tài nguyên hoặc dịch vụ từ máy chủ.
@@ -22,7 +22,7 @@ Mô hình Server/Client thường được sử dụng trong các ứng dụng w
 
 Mô hình Server/Client cho phép phân chia công việc và trách nhiệm giữa máy chủ và máy khách. Máy chủ đảm nhận vai trò chính trong việc cung cấp dịch vụ và xử lý logic, trong khi máy khách tận dụng các tài nguyên và dịch vụ được cung cấp bởi máy chủ.
 
-**3, Sự khác nhau:**
+**3, Sự khác nhau:**<br>
 PubSub không phải là một tương tác giữa Server và Client trong kiến trúc Server/Client truyền thống. Thay vào đó, PubSub là một mô hình giao tiếp giữa các thành phần hoặc hệ thống khác nhau trong lập trình phần mềm.
 
 Trong mô hình PubSub, có hai thành phần chính: người xuất bản (publisher) và người đăng ký (subscriber). Người xuất bản tạo ra thông điệp và gửi chúng đến các chủ đề (topics) chung. Người đăng ký quan tâm đến các chủ đề cụ thể và đăng ký để nhận thông điệp từ chúng.
@@ -31,7 +31,7 @@ Khác với mô hình Server/Client, PubSub không yêu cầu sự tương tác 
 
 Mô hình PubSub thường được sử dụng trong các hệ thống phân tán, nơi các thành phần cần giao tiếp với nhau mà không cần biết đến sự tồn tại cụ thể của nhau. Nó cung cấp tính linh hoạt và khả năng mở rộng, cho phép các thành phần mới tham gia hoặc rời khỏi hệ thống một cách dễ dàng mà không ảnh hưởng đến các thành phần khác.
 
-**4, Khái niệm MQTT**
+**4, Khái niệm MQTT**<br>
 MQTT (Message Queuing Telemetry Transport) là một giao thức gửi nhận thông điệp đơn giản, nhẹ nhàng và được sử dụng rộng rãi trong các ứng dụng IoT (Internet of Things) và M2M (Machine-to-Machine) communication.
 
 MQTT được thiết kế để hoạt động trên các mạng có băng thông hạn chế, kết nối không đáng tin cậy và thiết bị có tài nguyên thấp như cảm biến và thiết bị nhúng. Giao thức này sử dụng mô hình giao tiếp Publish-Subscribe (PubSub) mà tôi đã giải thích trước đó.
@@ -49,8 +49,8 @@ MQTT sử dụng mô hình giao tiếp bất đồng bộ (asynchronous) và có
 MQTT là một giao thức linh hoạt và dễ triển khai, được sử dụng rộng rãi trong các ứng dụng IoT như kiểm soát thiết bị thông minh, giám sát môi trường, hệ thống nhà thông minh và nhiều ứng dụng khác.
 Ngoài ra quan tâm: AMQP, CoAP, DDS, XMPP
 
-**5, Dùng hivemq**
-[Trang web] [https://www.hivemq.com/mqtt/public-mqtt-broker/] cung cấp thông tin về MQTT và cung cấp một công cụ Public MQTT Broker miễn phí bởi HiveMQ. Dưới đây là một số thông tin cơ bản về MQTT được đề cập trên trang web này:
+**5, Dùng hivemq**<br>
+Trang web [https://www.hivemq.com/mqtt/public-mqtt-broker/] cung cấp thông tin về MQTT và cung cấp một công cụ Public MQTT Broker miễn phí bởi HiveMQ. Dưới đây là một số thông tin cơ bản về MQTT được đề cập trên trang web này:
 
 MQTT Essentials: Trang web cung cấp các tài liệu MQTT Essentials để bạn nắm vững kiến thức cơ bản về giao thức MQTT. Bạn có thể tìm hiểu về các khái niệm quan trọng như publish-subscribe, QoS (Quality of Service), retained messages và nhiều hơn nữa.
 
@@ -64,7 +64,7 @@ MQTT Browser Client: HiveMQ cung cấp MQTT Browser Client, một giao diện MQ
 
 Nếu bạn quan tâm đến chi tiết hơn, tôi khuyến nghị truy cập trang web https://www.hivemq.com/mqtt/public-mqtt-broker/ để tìm hiểu thêm và khám phá các tài nguyên MQTT mà HiveMQ cung cấp.
 
-**6, Cài đặt MQTT trên ESP32**
+**6, Cài đặt MQTT trên ESP32**<br>
 Để cài đặt thư viện MQTT client trên ESP32, bạn có thể sử dụng thư viện "PubSubClient":
 Mở Arduino IDE.
 Nhấp vào menu "Sketch" và chọn "Include Library" > "Manage Libraries...".
