@@ -65,10 +65,10 @@ MQTT Browser Client: HiveMQ cung cấp MQTT Browser Client, một giao diện MQ
 Nếu bạn quan tâm đến chi tiết hơn, tôi khuyến nghị truy cập trang web https://www.hivemq.com/mqtt/public-mqtt-broker/ để tìm hiểu thêm và khám phá các tài nguyên MQTT mà HiveMQ cung cấp.
 
 **6, Cài đặt MQTT trên ESP32**<br>
-Để cài đặt thư viện MQTT client trên ESP32, bạn có thể sử dụng thư viện "PubSubClient":
-Mở Arduino IDE.
-Nhấp vào menu "Sketch" và chọn "Include Library" > "Manage Libraries...".
-Trong hộp tìm kiếm, nhập "PubSubClient" và nhấp Enter.
-Tìm thư viện "PubSubClient" trong kết quả tìm kiếm và nhấp vào nút "Install" để cài đặt thư viện.
-Chờ đợi quá trình cài đặt hoàn thành.
+Để cài đặt thư viện MQTT client trên ESP32, bạn có thể sử dụng thư viện "PubSubClient":<br>
+Mở Arduino IDE.<br>
+Nhấp vào menu "Sketch" và chọn "Include Library" > "Manage Libraries...".<br>
+Trong hộp tìm kiếm, nhập "PubSubClient" và nhấp Enter.<br>
+Tìm thư viện "PubSubClient" trong kết quả tìm kiếm và nhấp vào nút "Install" để cài đặt thư viện.<br>
+Chờ đợi quá trình cài đặt hoàn thành.<br>
 Sau khi thư viện PubSubClient đã được cài đặt thành công, bạn có thể sử dụng nó để phát triển ứng dụng MQTT client trên ESP32. Bạn có thể tham khảo các ví dụ và tài liệu hướng dẫn trên trang web chính thức của thư viện PubSubClient để biết cách sử dụng thư viện này trong việc kết nối và giao tiếp với MQTT broker.
