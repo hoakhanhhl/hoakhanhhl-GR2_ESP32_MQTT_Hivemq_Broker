@@ -5,10 +5,10 @@ Public broker: Sử dụng cổng 1883, không có bảo mật, thường dùng 
 Private broker: Sử dụng cổng 8883 và bảo mật SSL/TLS. Bạn có thể sử dụng nó trong các sản phẩm thương mại, nhưng tất nhiên nên để ý các điều khoản khi sử dụng nhé
 - Cách sử dụng Public broker<br>
 Link ứng dụng: https://www.hivemq.com/
-
+<br>
 Link ảnh: https://drive.google.com/drive/folders/14kIu2sUUVLoCfeHMQGtzChkAY9ea1KHR
 - Lập trình ESP32 MQTT
-+ Cài đặt thư viện pubsubclient
++ Cài đặt thư viện pubsubclient<br>
 **1, Khái niệm PubSub**
 PubSub là một mô hình giao tiếp trong lập trình phần mềm, nơi các thành phần gửi và nhận thông điệp thông qua việc xuất bản và đăng ký các thông điệp trên các chủ đề (topics) chung. Người xuất bản tạo và gửi thông điệp vào chủ đề, trong khi người đăng ký quan tâm đến các thông điệp trong chủ đề đó và nhận thông điệp khi chúng được gửi đi. Mô hình này được sử dụng trong các hệ thống phân tán và cung cấp tính linh hoạt và khả năng mở rộng. Một ví dụ thực tế của PubSub là hệ thống gửi thông báo trong ứng dụng di động.
 
